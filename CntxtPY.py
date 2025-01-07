@@ -92,7 +92,7 @@ class PythonCodeKnowledgeGraph:
         self.ignored_directories = {
             '__pycache__', '.git', '.idea', '.vscode', '.venv', 'env', 'venv',
             '.mypy_cache', '.pytest_cache', '.eggs', 'build', 'dist', 'node_modules',
-            '.tox', '.coverage', '.svn', '.hg'
+            '.tox', '.coverage', '.svn', '.hg', '.conda'
         }
 
         self.ignored_files = {

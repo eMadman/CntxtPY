@@ -13,7 +13,7 @@ input_file = sys.argv[1]
 if not os.path.exists(input_file):
     raise FileNotFoundError(f"File not found: {input_file}")
 
-with open(input_file, "r") as f:
+with open(input_file, "r", encoding='utf-8') as f:
     knowledge_graph = json.load(f)
 
 # Function to generate abbreviations for all unique terms
@@ -129,5 +129,5 @@ os.makedirs(output_dir, exist_ok=True)  # Create the directory if it doesn't exi
 
 # Write the compressed data to the file in the "compression" directory
 output_file = os.path.join(output_dir, "compressed_knowledge_graph.txt")
-with open(output_file, "w") as f:
+with open(output_file, "w", encoding='utf-8') as f:
     f.write(compressed_data)
